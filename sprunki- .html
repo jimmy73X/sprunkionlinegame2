@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Sprunki - the exciting online adventure game. Join thousands of players worldwide in this immersive experience.">
+    <link rel="canonical" href="https://sprunkionlinegame.it.com">
+    <title>Sprunki Online - Play the Ultimate Adventure Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-blue': '#0071e3',
+                        'apple-light': '#f5f5f7',
+                        'apple-dark': '#1d1d1f',
+                        'apple-gray': '#86868b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #1d1d1f;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .hero-section {
+            background: linear-gradient(to right, #0a84ff, #5e5ce6);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.2);
+        }
+        
+        .game-frame {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: none;
+            background: #000;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 113, 227, 0.2);
+        }
+        
+        .footer {
+            background: linear-gradient(to right, #1d1d1f, #000);
+            color: #f5f5f7;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .btn-apple {
+            background: linear-gradient(to right, #0071e3, #0a84ff);
+            color: white;
+            border-radius: 12px;
+            padding: 12px 28px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 113, 227, 0.3);
+        }
+        
+        .btn-apple:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 113, 227, 0.4);
+        }
+        
+        .nav-link {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0071e3;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .stats-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stats-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                border-radius: 0 0 20px 20px;
+            }
+            
+            .game-frame {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white py-4 px-6 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-apple-blue w-10 h-10 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-gamepad text-white text-xl"></i>
+                </div>
+                <span class="ml-3 text-xl font-bold text-apple-dark">Sprunki</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link font-medium text-apple-dark">Home</a>
+                <a href="#" class="nav-link font-medium text-apple-dark">Gameplay</a>
+                <a href="#" class="nav-link font-medium text-apple-dark">Features</a>
+                <a href="#" class="nav-link font-medium text-apple-dark">Community</a>
+                <a href="#" class="nav-link font-medium text-apple-dark">Support</a>
+            </div>
+            
+            <button class="btn-apple font-semibold">Play Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Sprunki Online</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-90">
+                The ultimate adventure game where strategy meets excitement in a vibrant, ever-evolving world
+            </p>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="game-frame w-full h-[500px]">
+                    <iframe src="https://sprunkiincredibox.org/game/sprunki-original/" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Description -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">The Ultimate Online Adventure</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-apple-blue">Welcome to the World of Sprunki</h3>
+                    <p class="text-lg text-apple-gray mb-6 leading-relaxed">
+                        Sprunki is a massively multiplayer online adventure game set in a vibrant, ever-evolving universe. 
+                        Players from around the globe join forces to explore mystical lands, battle formidable foes, and 
+                        uncover ancient secrets.
+                    </p>
+                    <p class="text-lg text-apple-gray mb-6 leading-relaxed">
+                        With regular content updates and a thriving community, Sprunki offers an immersive experience 
+                        that keeps players engaged for hours on end. Whether you're a casual explorer or a competitive 
+                        strategist, there's a place for you in this expansive world.
+                    </p>
+                    <div class="flex items-center mt-8">
+                        <div class="flex -space-x-2">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-medium">Join <span class="text-apple-blue font-bold">1.2M+</span> players worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="feature-card p-6">
+                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-swords text-apple-blue text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Epic Battles</h3>
+                        <p class="text-apple-gray">Strategic combat with hundreds of unique skills and abilities</p>
+                    </div>
+                    <div class="feature-card p-6">
+                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Guild System</h3>
+                        <p class="text-apple-gray">Form alliances and conquer territories with friends</p>
+                    </div>
+                    <div class="feature-card p-6">
+                        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-dragon text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Mythical Creatures</h3>
+                        <p class="text-apple-gray">Discover and tame legendary beasts from ancient lore</p>
+                    </div>
+                    <div class="feature-card p-6">
+                        <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-gem text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Treasure Hunts</h3>
+                        <p class="text-apple-gray">Solve puzzles and find hidden riches across the realms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 px-6 bg-apple-light">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">By The Numbers</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="stats-item">
+                    <div class="text-4xl font-bold text-apple-blue mb-2">1.2M+</div>
+                    <p class="text-lg">Active Players</p>
+                </div>
+                <div class="stats-item">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">27</div>
+                    <p class="text-lg">Unique Realms</p>
+                </div>
+                <div class="stats-item">
+                    <div class="text-4xl font-bold text-green-600 mb-2">500+</div>
+                    <p class="text-lg">Quests Available</p>
+                </div>
+                <div class="stats-item">
+                    <div class="text-4xl font-bold text-yellow-600 mb-2">96%</div>
+                    <p class="text-lg">Positive Reviews</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Play -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Getting Started</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-4xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Create Account</h3>
+                    <p class="text-apple-gray max-w-xs mx-auto">
+                        Sign up with email or social media in seconds. No downloads required!
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-4xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Customize Avatar</h3>
+                    <p class="text-apple-gray max-w-xs mx-auto">
+                        Choose from hundreds of customization options to create your unique hero.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-4xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Start Adventure</h3>
+                    <p class="text-apple-gray max-w-xs mx-auto">
+                        Complete the tutorial and embark on your first quest in the world of Sprunki.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <button class="btn-apple px-10 py-5 text-xl">
+                    <i class="fas fa-user-plus mr-3"></i> Create Free Account
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="bg-apple-blue w-10 h-10 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-gamepad text-white text-xl"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-white">Sprunki</span>
+                    </div>
+                    <p class="text-apple-gray mb-6">
+                        The ultimate online adventure game with endless possibilities and a thriving community.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
+                            <i class="fab fa-discord text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Game Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-apple-gray hover:text-white">Download Client</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Game Updates</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Leaderboards</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Events Calendar</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Merchandise</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-apple-gray hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Community Forums</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Server Status</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-apple-gray hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Cookie Policy</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">Refund Policy</a></li>
+                        <li><a href="#" class="text-apple-gray hover:text-white">EULA</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-apple-gray">
+                    © 2023 Sprunki Online Game. All rights reserved. sprunkionlinegame.it.com
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for stats counter
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsItems = document.querySelectorAll('.stats-item');
+            
+            statsItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                item.addEventListener('mouseout', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
